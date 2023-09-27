@@ -83,19 +83,28 @@ The full hash is not received, but this end of the hash is unique enough where y
 
 I cherry picked 16 commits that I found were related to the README.md file. The commit hashes of the cherry-picked commits are not identical in main and feature-branch because in the act of cherry picking you are copying the changes of the commits which designate a new 'prime' commit to the branch, not necessarily using the exact same commit.
 
+### Question 4
 
-4. What happens if you merge a branch from which you previously cherry-picked single commits? How often do the cherry-picked commits appear in the history? Briefly explain why.
+> What happens if you merge a branch from which you previously cherry-picked single commits? How often do the cherry-picked commits appear in the history? Briefly explain why.
 
 When you merge the branch the cherry-picked commits are a 'prime' of the original commit, so it is completely independent of the original commit and treated as its own commit in the history as such. So the cherry-picked commit is shown and then the cherry-picked 'prime' commit is shown in the history, so the commit appears twice.
 
+## Question 5
 
-5. What are the risks of rebasing? Mention at least two risks. Briefly describe a use case in which rebasing
-can be safely applied.
+> What are the risks of rebasing? Mention at least two risks. Briefly describe a use case in which rebasing can be safely applied.
 
 
-6. What are the risks of using reset when a commit has already been pushed?
+Two risks of rebasing are losing commits due to rebasing too often and possibly destroying code if you rebase incorrectly.
+
+A use case in which rebasing can be safely applied is when you are working on your own local branch that other users do not use, specifically for rebasing commits together to make sure every commit is meaningful.
+
+### Question 6
+
+> What are the risks of using reset when a commit has already been pushed?
 
 Using reset can have cascading effects to the commit history in a project. The reset process orphans commits after the reset point. This causes commits to be disconnected from the project, so contributors could be branching from this disconnected portion that will have problems merging back to the main project. Resetting to a commit also has potential for work to be lost.
 
 
-7. Does revert remove the reverted commit? Briefly explain how revert works.
+### Question 7
+
+> Does revert remove the reverted commit? Briefly explain how revert works.
