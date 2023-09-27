@@ -66,7 +66,14 @@ After doing this, all of the files on my program are updated, so I wrote my code
 
 After all of the code for `MinMaxCalculation.java` was completed, I then wrote `git fetch` and `git merge` again to ensure I would not conflict with anything my partner created on the `master branch`. Once this was complete, I (in the root directory) wrote `git add src/MinMaxCalculation.java` to add the file to the git commit, and then wrote `git commit -m "complete MinMaxCalculation.java with findMin() and findMax() implemented"` to create the commit. After this, I simply wrote `git push` to push all of my recent commits to the remote repository.
 
-Some techniques you can use to identify this commit is through the name of the commit, which is the message in `git commit -m "<message>"`, but two git commits can have the same name. Instead, the best way to tell specific commits is through the hash received upon committing.
+Some techniques you can use to identify this commit is through the name of the commit, which is the message in `git commit -m "<message>"`, but two git commits can have the same name. Instead, the best way to tell specific commits is through the hash received upon committing. Upon completing your commit message, the console will print out
+
+```sh
+[master <hash>] <message>
+ X file changed, Y insertions(+), Z deletions(-)
+```
+
+The full hash is not received, but this end of the hash is unique enough where you will be able to identify your specific commit.
 
 
 
