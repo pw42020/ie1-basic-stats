@@ -108,3 +108,5 @@ Using reset can have cascading effects to the commit history in a project. The r
 ### Question 7
 
 > Does revert remove the reverted commit? Briefly explain how revert works.
+
+No, git does not remove the reverted commit. Revert applies a change in the commit that is the opposite of the reverted content, so the project goes back to its original state, and the overwritten commit is still shown in the commit history. As an example, if commits were numbers then by reverting the following: 1 + 2 + 3, we get 1 + 2 + 3 - 5 instead of simply 1. The original commit is 1, and in terms of content we revert back to the content, but we still see the full history of commits as 1 + 2 + 3 - 2.
